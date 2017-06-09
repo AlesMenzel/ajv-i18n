@@ -69,7 +69,7 @@ module.exports = {
   },
   additionalItems: {
     en: '{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}',
-    cz: '{{#def.n}}nemůže mít víc, než {{=n}} prv{{#def.mPlural}}',
+    cz: '{{#def.n}}nemůže mít více než {{=n}} prv{{#def.mPlural}}',
     de: '{{#def.n}}sollte nicht mehr als {{=n}} Element{{#def.mPlural}} enthalten',
     es: '{{#def.n}}no debe tener más de {{=n}} elemento{{#def.mPlural}}',
     fr: '{{#def.n}}ne doit pas contenir plus de {{=n}} élémént{{#def.mPlural}}',
@@ -107,7 +107,7 @@ module.exports = {
   },
   anyOf: {
     en: 'should match some schema in "anyOf"',
-    cz: 'musí vyhovět alespoň jednému schématu v "anyOf"',
+    cz: 'musí vyhovět alespoň jednomu z definovaných schématů',
     de: 'sollte einem der Schemata in "anyOf" entsprechen',
     es: 'debe coincidir con algún esquema en "anyOf"',
     fr: 'doit correspondre à un schéma de "anyOf"',
@@ -230,7 +230,7 @@ module.exports = {
   },
   maxItems: {
     en: '{{#def.n}}should not have more than {{=n}} item{{#def.mPlural}}',
-    cz: '{{#def.n}}nesmí mýt víc než {{=n}} prv{{#def.mPlural}}',
+    cz: '{{#def.n}}nesmí mít víc než {{=n}} prv{{#def.mPlural}}',
     de: '{{#def.n}}sollte nicht mehr als {{=n}} Element{{#def.mPlural}} haben',
     es: '{{#def.n}}no debe contener más de {{=n}} elemento{{#def.mPlural}}',
     fr: '{{#def.n}}ne doit pas contenir plus de {{=n}} élément{{#def.mPlural}}',
@@ -249,7 +249,7 @@ module.exports = {
   },
   minItems: {
     en: '{{#def.n}}should not have less than {{=n}} item{{#def.mPlural}}',
-    cz: '{{#def.n}}nesmí mýt méně než {{=n}} prv{{#def.mPlural}}',
+    cz: '{{#def.n}}nesmí mít méně než {{=n}} prv{{#def.mPlural}}',
     de: '{{#def.n}}sollte nicht weniger als {{=n}} Element{{#def.mPlural}} haben',
     es: '{{#def.n}}no debe contener menos de {{=n}} elemento{{#def.mPlural}}',
     fr: '{{#def.n}}ne doit pas contenir moins de {{=n}} élément{{#def.mPlural}}',
@@ -363,7 +363,7 @@ module.exports = {
   },
   not: {
     en: 'should not be valid according to schema in "not"',
-    cz: 'nesmí vyhovět schématu v "not"',
+    cz: 'nesmí vyhovět definovanému schématu',
     de: 'sollte dem in "not" angegebenen Schema widersprechen',
     es: 'no debe ser válido según el esquema en "not"',
     fr: 'est invalide selon le schéma "not"',
@@ -382,7 +382,7 @@ module.exports = {
   },
   oneOf: {
     en: 'should match exactly one schema in "oneOf"',
-    cz: 'musí vyhovět právě jednému schématu v "oneOf"',
+    cz: 'musí vyhovět právě jednomu definovanému schématu',
     de: 'sollte genau einem der Schemata in "oneOf" entsprechen',
     es: 'debe coincidir con un solo esquema en "oneOf"',
     fr: 'doit correspondre à exactement un schéma de "oneOf"',
@@ -420,7 +420,7 @@ module.exports = {
   },
   required: {
     en: 'should have required property {{=e.params.missingProperty}}',
-    cz: 'musí mýt požadovanou položku {{=e.params.missingProperty}}',
+    cz: 'položka je vyžadována',
     de: 'sollte das erforderliche Attribut {{=e.params.missingProperty}} enthalten',
     es: 'debe tener la propiedad requerida {{=e.params.missingProperty}}',
     fr: 'requiert la propriété {{=e.params.missingProperty}}',
@@ -458,7 +458,7 @@ module.exports = {
   },
   uniqueItems: {
     en: 'should not have duplicate items (items ## {{=e.params.j}} and {{=e.params.i}} are identical)',
-    cz: 'nesmí mýt duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou stejné)',
+    cz: 'nesmí mít duplicitní prvky (prvky ## {{=e.params.j}} a {{=e.params.i}} jsou stejné)',
     de: 'sollte keine Duplikate enthalten (Elemente #{{=e.params.j}} und #{{=e.params.i}} sind gleich)',
     es: 'no debe contener elementos duplicados, (los elementos ## {{=e.params.j}} y {{=e.params.i}} son idénticos)',
     fr: 'ne doit pas contenir de doublons (les éléments ## {{=e.params.j}} et {{=e.params.i}} sont identiques)',
@@ -490,7 +490,7 @@ module.exports = {
   },
   patternGroups: {
     en: '{{#def.n}}should have {{=e.params.reason}} {{=n}} propert{{#def.propPlural}} matching pattern "{{=e.params.pattern}}"',
-    cz: '{{#def.n}}musí mýt {{=e.params.reason}} {{=n}} polož{{#def.propPlural}} vyhovující regulárnímu výrazu "{{=e.params.pattern}}"',
+    cz: '{{#def.n}}musí mít {{=e.params.reason}} {{=n}} polož{{#def.propPlural}} vyhovující regulárnímu výrazu "{{=e.params.pattern}}"',
     de: '{{#def.n}}sollte {{=e.params.reason}} {{=n}} Attribut{{#def.propPlural}} nach folgendem Muster haben "{{=e.params.pattern}}"',
     es: '{{#def.n}}debe tener {{=e.params.reason}} {{=n}} propiedad{{#def.propPlural}} coincidente{{#def.mPlural}} con el patrón "{{=e.params.pattern}}"',
     fr: '{{#def.n}}doit avoir {{=e.params.reason}} {{=n}} propriété{{#def.propPlural}} correspondant au format "{{=e.params.pattern}}"',
@@ -511,7 +511,7 @@ module.exports = {
   },
   patternRequired: {
     en: 'should have property matching pattern "{{=e.params.missingPattern}}"',
-    cz: 'musí mýt položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
+    cz: 'musí mít položku vyhovující regulárnímu výrazu "{{=e.params.missingPattern}}"',
     de: 'sollte ein Attribut nach folgendem Muster haben "{{=e.params.missingPattern}}"',
     es: 'la propiedad debe coincidir con el patrón "{{=e.params.missingPattern}}"',
     fr: 'la propriété doit correspondre au format "{{=e.params.missingPattern}}"',
@@ -524,7 +524,7 @@ module.exports = {
   },
   switch: {
     en: 'should pass \"switch\" keyword validation, case {{=e.params.caseIndex}} fails',
-    cz: 'musí projít validácí \"switch\", případ {{=e.params.caseIndex}} je neúspěšný',
+    cz: 'případ {{=e.params.caseIndex}} není validní',
     de: 'sollte der \"switch\" Validierung entsprechen, der Fall {{=e.params.caseIndex}} schlägt fehl',
     es: 'debe pasar la validación \"switch\" de palabra clave, el caso {{=e.params.caseIndex}} falló',
     fr: 'doit être valide selon le critère \"switch\":validation par mot-clé, le cas {{=e.params.caseIndex}} est invalide',
